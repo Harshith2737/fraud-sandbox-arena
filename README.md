@@ -71,3 +71,25 @@ Yes, you can!
 To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
 
 Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+
+## Backend setup
+
+This repository now includes a lightweight Express backend located in `backend/`.
+
+### Backend scripts
+
+```sh
+cd backend
+npm install
+npm run dev
+```
+
+The API is served at `http://localhost:5000/api` and includes:
+
+- `GET /api/health` for a health check
+- `GET /api/items` to list items
+- `POST /api/items` to create an item
+- `PUT /api/items/:id` to update an item
+- `DELETE /api/items/:id` to remove an item
+
+Set `PORT` and `CORS_ORIGIN` in a `.env` file if you need to customize runtime settings.
