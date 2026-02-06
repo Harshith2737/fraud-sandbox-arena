@@ -93,3 +93,5 @@ The API is served at `http://localhost:5000/api` and includes:
 - `DELETE /api/items/:id` to remove an item
 
 Set `PORT` and `CORS_ORIGIN` in a `.env` file if you need to customize runtime settings.
+
+For the frontend, you can optionally set `VITE_API_BASE_URL` (for example, when the API is hosted elsewhere). When running locally, the Vite dev server proxies `/api` requests to `http://localhost:5000` by default.
